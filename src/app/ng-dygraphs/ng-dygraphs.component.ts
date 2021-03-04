@@ -15,7 +15,8 @@ export class NgDygraphsComponent implements OnInit {
   var t = new Date();
   for (var i = 10; i >= 0; i--) {
     var x = new Date(t.getTime() - i * 1000);
-    data.push([x, Math.random()]);
+    //data.push([x, Math.random()]);
+    data.push([x, Math.random() * 70]);
   }
 
   var g = new Dygraph(document.getElementById("div_g"), data,
