@@ -1,0 +1,15 @@
+<ul *ngFor="let item of sampledata">
+<li>{{item.time}}
+  {{item.value}}
+  <h3>{{errorMsg}}</h3>
+</li></ul>
+<!-- data = [[new Date("2008/05/07"), 75],
+          [new Date("2008/05/08"), 70],
+          [new Date("2008/05/09"), 80]
+         ];
+
+  options = {width: 'auto', labels: ['Date','Temperature'], xlabel: 'X label text', ylabel: 'Y label text', title: 'Working title' , animatedZooms: true, pointSize: 4} -->
+  <!-- <ng-dygraphs
+  [data]={{item.time}}
+  [options]={{item.value}}>
+</ng-dygraphs> -->
