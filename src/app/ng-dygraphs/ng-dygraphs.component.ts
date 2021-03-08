@@ -16,24 +16,24 @@ export class NgDygraphsComponent implements OnInit {
   for (var i = 10; i >= 0; i--) {
     var x = new Date(t.getTime() - i * 1000);
     //data.push([x, Math.random()]);
-    data.push([x, Math.random() * 70]);
+    data.push([x, Math.floor(Math.random() * 90)]);
   }
 
   var g = new Dygraph(document.getElementById("div_g"), data,
                       {
                         drawPoints: true,
                         showRoller: true,
-                        valueRange: [0.0, 1.2],
+                        valueRange: [10, 100],
                         color: '#4292c6',
-                        labels: ['Time', 'Random'],
-                     strokeWidth: 2,
-                     showRangeSelector: true
+                        labels: ['Time', 'value'],
+                    //  strokeWidth: 2,
+                    //  showRangeSelector: true
 
 
                       });
   setInterval(function() {
     var x = new Date();
-    var y = Math.random();
+    var y = Math.floor(Math.random()*90);
     data.push([x, y]);
     data.shift();
     g.updateOptions( { 'file': data } );
