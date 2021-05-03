@@ -13,8 +13,8 @@ export class SampleComponent implements OnInit {
 
   ngOnInit() {
     this._sampleservice.getSampledata()
-    .subscribe(data =>this.sampledata =data,
-      error=>this.errorMsg =error);
+    .subscribe(data =>this.sampledata =data);
+      //error=>this.errorMsg =error);
   }
 
 }
